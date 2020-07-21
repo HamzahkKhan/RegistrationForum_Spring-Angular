@@ -1,0 +1,97 @@
+<form class="form-horizontal" method="post">
+
+
+  <label>User Name</label>
+  <input type="text" placeholder="Enter User Name" class="form-control"
+         [(ngModel)]="username"
+         (change)="checkUserName()"
+         (input)="checkFormEmpty()"
+         [ngModelOptions]="{standalone: true}">
+
+  <p class="error_msg">{{ errorName }}</p>
+
+  <br>
+  <label>Email</label>
+  <input type="text" placeholder="Enter Your Email" class="form-control"
+         [(ngModel)]="email"
+         (change)="checkEmail()"
+         (input)="checkFormEmpty()"
+         [ngModelOptions]="{standalone: true}">
+
+  <p class="error_msg">{{ errorEmail }}</p>
+
+  <br>
+  <label>Password</label>
+  <input type="password" placeholder="Enter Your Password" class="form-control"
+         [(ngModel)]="password"
+         (input)="checkFormEmpty()"
+         [ngModelOptions]="{standalone: true}">
+
+  <br>
+  <label>Date of Birth</label>
+  <input type="text" placeholder="01/0/96" class="form-control"
+         [(ngModel)]="dateOfBirth"
+         (input)="checkFormEmpty()"
+         [ngModelOptions]="{standalone: true}">
+
+  <br>
+  <label>Address</label>
+  <input type="text" placeholder="Address" class="form-control"
+         [(ngModel)]="address"
+         (input)="checkFormEmpty()"
+         [ngModelOptions]="{standalone: true}">
+
+  <br>
+  <label>Nationality</label>
+  <input type="text" placeholder="Nationality" class="form-control"
+         [(ngModel)]="nationlity"
+         (input)="checkFormEmpty()"
+         [ngModelOptions]="{standalone: true}">
+
+  <br>
+  <label>Phone Number</label>
+  <input type="text" placeholder="+xx xxxx xxxx" class="form-control"
+         [(ngModel)]="phonenumber"
+         (input)="checkFormEmpty()"
+         [ngModelOptions]="{standalone: true}">
+
+
+  <br>
+
+  <button class="btn bg-success"
+          [disabled]="enableAddButton"
+          (click)="createUser()"> Add
+  </button>
+
+
+  <br>
+  <br>
+
+
+  <p>{{fixerror}}</p>
+<!--
+  <div class="users_List" [hidden]="hide">
+    <table class="table table-striped">
+
+      <tr>
+        <th class="hidden">Id</th>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr>
+
+      <tbody>
+      <tr *ngFor="let user of users">
+        <td class="hidden"></td>
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.useremail}}</td>
+        <td>{{user.userpassword}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>-->
+
+</form>
+<hr>

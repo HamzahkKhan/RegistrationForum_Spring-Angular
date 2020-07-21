@@ -1,0 +1,30 @@
+
+<div class="users_List">
+  <table class="table table-striped">
+
+    <tr>
+      <th class="hidden">Id</th>
+      <th class="text-center">ID</th>
+      <th class="text-center">Username</th>
+      <th class="text-center">Email</th>
+      <th class="text-center">Password</th>
+      <th class="text-center">Action</th>
+    </tr>
+
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td class="hidden"></td>
+      <td class="text-center">{{user.id}}</td>
+      <td class="text-center">{{user.username}}</td>
+      <td class="text-center">{{user.useremail}}</td>
+      <td class="text-center">{{user.userpassword}}</td>
+      <td class="text-center">
+        <button class="btn bg-success" style="margin-right: 10px" (click)="updateUser(user.id, user.username)"> Edit </button>
+        <button class="btn bg-success" style="margin-right: 10px"> Details </button>
+        <button class="btn bg-success" (click)="deleteUser(user)"> Delete </button></td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
